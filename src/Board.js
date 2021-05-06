@@ -1,6 +1,6 @@
 class Board{
 	constructor(width=20,length=10,bombNumber=5){
-		if((typeof width)!="number"||(typeof length)!="number"||(typeof bombNumber)!="number"){
+		if((typeof width)!=="number"||(typeof length)!=="number"||(typeof bombNumber)!=="number"){
 			throw new Error("Invalid Input");
 		}
 		this.width=width;
@@ -40,7 +40,7 @@ class Board{
 		while(bombCount<this.bombNumber){
 			coords.row=Math.floor(Math.random()*this.length);
 			coords.col=Math.floor(Math.random()*this.length);
-			if(!bombs.find(el=>el.row==coords.row&&el.col==coords.col)){
+			if(!bombs.find(el=>el.row===coords.row&&el.col===coords.col)){
 				bombs.push({...coords});
 				bombCount++;
 			}
@@ -68,7 +68,7 @@ class Board{
 		let count=0;
 		for(let i=-1;i<2;i++){
 			for(let j=-1;j<2;j++){
-				if((i==0&&j==0)||row+i<0||col+j<0|| row+i>=this.length||col+j>=this.width){
+				if((i===0&&j===0)||row+i<0||col+j<0|| row+i>=this.length||col+j>=this.width){
 					continue;
 				}
 				if(this.board[row+i][col+j].hasBomb){
