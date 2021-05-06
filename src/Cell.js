@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Cell.css";
 class Cell extends React.Component{
-	constructor(props){
-		super(props);
-	}
+	//constructor(props){
+		//super(props);
+	//}
 
 	render(){
 		const color=this.props.beenPressed?(this.props.hasBomb?"red":"white"):"black";
