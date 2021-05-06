@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {createStore} from "redux";
 import{Provider,connect} from "react-redux";
 import reducer from "./reducers.js";
-import logo from './logo.svg';
 import './App.css';
 import Game from "./Game.js";
 
